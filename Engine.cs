@@ -16,7 +16,7 @@ namespace DotNETProject
             string password = inputData[2];
             string receiverMail = inputData[3];
 
-            string aggregatedDataDirectory = processInputData(filePath, senderMail, password, receiverMail);
+            string aggregatedDataDirectory = processInputData(filePath);
 
             sendMail(senderMail, password, receiverMail, aggregatedDataDirectory);
 
@@ -118,7 +118,7 @@ namespace DotNETProject
             }
         }
 
-        private string processInputData(string filePath, string senderMail, string password, string receiverMail)
+        private string processInputData(string filePath)
         {
 
             string[] rawFileContent = FileReaderWriter.readFromFile(filePath);
